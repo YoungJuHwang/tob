@@ -1,51 +1,5 @@
 @CHARSET "UTF-8";
-.solid{border: 1px solid black}
-.inline{display: inline} /* System.out.print() */
-/* 기본형이 인라인레벨인 테그
-<span>
-<a>
-<img> */
-
-.block{display: block;}  /* System.out.println() */
-/* 
-기본형이 블록레벨인 테그
-<div>
-<h1> - <h6>
-<p>
-<form>
-<header>
-<footer>
-<section>
- */
- 
-.none{display: none;} /* 존재하지 않음 */
-.hidden{visibility: hidden;} /* 존재하지만 보이지만 않게 하는 것. */
-
-/* layout_div 스타일시트 */
-.header {
-    background-color:white;
-    color:white;
-    text-align:center;
-    padding:5px;
-    
-	}
-.nav {
-    line-height:30px;
-    background-color:#eeeeee;
-    height:300px;
-    width:100px;
-    float:left;
-    padding:5px;	      
-	}
-.section {
-    width:350px;
-    float:left;
-    padding:10px;	 	 
-	}
-.footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-   padding:5px;	 	 
-	}
+.solid_black{border: 1px solid black}
+.display_inline{display: inline}
+.pad{padding-bottom: 30px}
+.outbox{width: 1000px; margin: auto; font-size: 18px;}
