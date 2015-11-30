@@ -23,10 +23,11 @@
 
 /* layout_div 스타일시트 */
 .header {
-    background-color:black;
+    background-color:white;
     color:white;
     text-align:center;
     padding:5px;
+    
 	}
 .nav {
     line-height:30px;
