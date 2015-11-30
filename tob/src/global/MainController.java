@@ -48,6 +48,11 @@ public class MainController extends HttpServlet {
 			command.setAction("main");
 			command.setPage("null");
 			break;
+		case "admin": break;
+		case "book": break;
+		case "event": break;
+		case "member": break;
+		case "order": break;
 		default:
 			break;
 		}

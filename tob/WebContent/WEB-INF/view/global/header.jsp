@@ -27,18 +27,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="${context}/jquery/main.do?page=hello">jQuery 소개</a></li>
-            <li><a href="${context}/jquery/main.do?page=form_tag"> form_tag </a></li>
-			<li><a href="${context}/jquery/main.do?page=selector"> selector </a></li>
-			<li><a href="${context}/jquery/main.do?page=traversing"> Traversing(조회) </a></li>
-			<li><a href="${context}/jquery/main.do?page=attribute"> Attribute </a></li>
-			<li><a href="${context}/jquery/main.do?page=core"> Core </a></li>
-			<li><a href="${context}/jquery/main.do?page=css"> CSS </a></li>
-			<li><a href="${context}/jquery/main.do?page=effect"> Effect </a></li>
-			<li><a href="${context}/jquery/main.do?page=data"> Data </a></li>
-			<li><a href="${context}/jquery/main.do?page=event"> Event </a></li>
-			<li><a href="${context}/jquery/main.do?page=utility"> Utility </a></li>
-			<li><a href="${context}/jquery/main.do?page=ajax"> AJAX </a></li>
+            <li><a href="${context}/main.do?page=book">연우페이지로</a></li>
+            <li><a href="${context}/main.do?page=event">정민페이지로</a></li>
+			<li><a href="${context}/main.do?page=order">혜숙페이지로</a></li>
+			<li><a href="${context}/main.do?page=member">형동페이지로</a></li>
+			<li><a href="${context}/main.do?page=admin">수민페이지로</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li role="separator" class="divider"></li>
