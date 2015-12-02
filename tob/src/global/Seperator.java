@@ -10,19 +10,16 @@ public class Seperator {
 	{
 		String path = request.getServletPath();
 		System.out.println("Seperator 진입, 경로 : " +path);
-		String temp = path.split("/")[1]; 
-		String action = temp.substring(0, temp.indexOf("."));
-		String page = request.getParameter("page");
+		String directory = path.split("/")[1]; 
+		String action = path.split("/")[2]; 
+		String page = action.substring(0, action.indexOf("."));
 		
-		System.out.println("분리된 action : "+action);
-		System.out.println("분리된 page : "+page);
+		System.out.println("분리된 directory : " + directory);
+		System.out.println("분리된 page : " + page);
+		if (directory.equals("main")) {
+			directory = "global";
+		}
 		
-		if (action.equals("main")) {
-			action = "global";
-		}
-		if (page == null) {
-			page = "main";
-		}
-		return factory.createCommand(action, page);
+		return factory.createCommand(directory, page);
 	}
 }

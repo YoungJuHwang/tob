@@ -3,9 +3,9 @@
 <script type="text/javascript">
 	$(function() {
 		Global.init();
-		$('#header').load('${context}/main.do?page=header');
-		$('#box').load('${context}/main.do?page=jumbotron');
-		$('#footer').load('${context}/main.do?page=footer');
+		$('#header').load('${context}/main/header.do');
+		$('#box').load('${context}/main/jumbotron.do');
+		$('#footer').load('${context}/main/footer.do');
 	});
 	
 </script>

@@ -24,7 +24,10 @@ import global.Seperator;
 /**
  * Servlet implementation class JsController
  */
-@WebServlet("/member.do")
+@WebServlet({"/member/Member.do","/member/joinMember.do","/member/login_form.do"
+				,"/member/login.do","/member/logined.do","/member/logout.do"
+				,"/member/mypage.do","/member/detail.do","/member/remove.do"
+				,"/member/update.do"})
 public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	MemberService service = MemberServiceImpl.getInstance();
@@ -41,7 +44,7 @@ public class MemberController extends HttpServlet {
 		Command command = Seperator.init(request, response);
 		HttpSession session = request.getSession();
 		switch (command.getPage()) {
-		case "join":
+		case "Member":
 			break;
 			
 		case "joinMember":

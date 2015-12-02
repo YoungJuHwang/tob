@@ -4,10 +4,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="${context}/css/common.css" /> 
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+
+<nav class="navbar navbar-default" style="hegith: 20%; padding-top: 50px; padding-left: 400px; margin-bottom: 0">
+  <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <div class="navbar-header" style="padding-right: 100px;">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -20,13 +21,14 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-left: 0; padding-right: 0;">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-				<li><a href="#">Link</a></li>
+				<li style="padding-right: 100px;"><a href="#">Event</a></li>
+				<li style="padding-right: 100px;"><a href="#">Link asdq34f3qv</a></li>
+				<li style="padding-right: 100px;"><a href="#">Link</a></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">Dropdown <span class="caret"></span></a>
+					aria-expanded="false">Category <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="${context}/book.do?page=book">연우페이지로</a></li>
 						<li><a href="${context}/main.do?page=event">정민페이지로</a></li>
@@ -39,15 +41,10 @@
 						<li><a href="#">One more separated link</a></li>
 					</ul></li>
 			</ul>
-			<form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">검 색</button>
-      </form>
+			
     <c:if test="${empty sessionScope.member}"> <!-- test뒤 부분은 조건식. sessionScope == null -->
       <!-- 로그인 전 상태 표시할 태그 -->
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" style="margin: 0; padding-right: 100px;">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
           aria-haspopup="true" aria-expanded="false">Sign in <span class="caret"></span></a>
@@ -59,6 +56,7 @@
         </li>
        </ul>
      </c:if>
+     
      <c:if test="${not empty sessionScope.member}"> <!-- sessionScope == not null 메인컨트롤러의 session.setAttribute때문에 가능.-->
      	<!-- 로그인 상태 시 표시할 태그 -->
      	<ul class="nav navbar-nav navbar-right" id="mypage">
@@ -77,6 +75,8 @@
 </nav>
 
 <script type="text/javascript">
+
+
 	$(function() {
 		$('#login').click(function() {
 			alert('sad');
@@ -90,7 +90,7 @@
 	
 	var bom = {};
 	bom.popup = function() { //크롬에서 팝업으로 새로운창 띄우기.
-		var url = "${context}/member.do?";
+		var url = "${context}/member/login.do?";
 		var name = "로그인";
 		var style = "toolbar=no,status=no,directories=no,scrollbars=yes,location=no,resizable=no,border=0,menubar=no";
 		var param = "page=login_form";

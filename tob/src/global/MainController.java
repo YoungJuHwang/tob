@@ -18,19 +18,19 @@ import member.MemberServiceImpl;
 /**
  * Servlet implementation class JsController
  */
-@WebServlet("/main.do")
+@WebServlet({"/main/Home.do","/main/header.do","/main/footer.do","/main/jumbotron.do"})
 public class MainController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
 	public void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException{
 		String path = request.getServletPath();
-		System.out.println("패스 ㅣ: " +path);
+		System.out.println("패스 : " +path);
 		Command command = Seperator.init(request, response);
 		MemberService service = MemberServiceImpl.getInstance();
 		System.out.println("메인컨트롤러 page : "+command.getPage());
 		switch (command.getPage()) {
-		case "main":
+		case "home":
 			break;
 		case "footer":
 			break;
