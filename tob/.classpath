@@ -12,11 +12,11 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/HB/Desktop/cos.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HB/Desktop/gson-2.2.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HB/Desktop/jstl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HB/Desktop/json_simple-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HB/Desktop/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HB/Desktop/standard.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/eclipse/jee-mars2/eclipse/cos.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/eclipse/jee-mars2/eclipse/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/eclipse/jee-mars2/eclipse/json_simple-1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/eclipse/jee-mars2/eclipse/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/eclipse/jee-mars2/eclipse/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/eclipse/jee-mars2/eclipse/standard.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
