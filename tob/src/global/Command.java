@@ -25,7 +25,7 @@ public class Command {
 	public void setPage(String page) {
 		this.page = page;
 	}
-	public void setView() {
+	public void setView() { //  -> /WEB-INF/view/action/page.jsp
 		this.view = Constants.VIEW + this.action +"/" + this.page + ".jsp";
-	}
+	}// VIEW = /WEB-INF/view/
 }

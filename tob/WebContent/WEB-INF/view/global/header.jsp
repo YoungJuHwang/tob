@@ -4,7 +4,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="${context}/css/common.css" /> 
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -21,25 +21,25 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="${context}/main.do?page=book">연우페이지로</a></li>
-            <li><a href="${context}/main.do?page=event">정민페이지로</a></li>
-			<li><a href="${context}/main.do?page=order">혜숙페이지로</a></li>
-			<li><a href="${context}/main.do?page=member">형동페이지로</a></li>
-			<li><a href="${context}/main.do?page=admin">수민페이지로</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+				<li><a href="#">Link</a></li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="false">Dropdown <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="${context}/book.do?page=book">연우페이지로</a></li>
+						<li><a href="${context}/main.do?page=event">정민페이지로</a></li>
+						<li><a href="${context}/main.do?page=order">혜숙페이지로</a></li>
+						<li><a href="${context}/main.do?page=member">형동페이지로</a></li>
+						<li><a href="${context}/main.do?page=admin">수민페이지로</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">One more separated link</a></li>
+					</ul></li>
+			</ul>
+			<form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>

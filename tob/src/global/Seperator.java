@@ -13,6 +13,10 @@ public class Seperator {
 		String temp = path.split("/")[1]; 
 		String action = temp.substring(0, temp.indexOf("."));
 		String page = request.getParameter("page");
+		
+		System.out.println("분리된 action : "+action);
+		System.out.println("분리된 page : "+page);
+		
 		if (action.equals("main")) {
 			action = "global";
 		}

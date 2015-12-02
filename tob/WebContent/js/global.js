@@ -1,6 +1,10 @@
 var Global = {
 		init : function() {
 			//함수내부는 절차지향임.
+			var wrap = document.createElement('div');
+			wrap.id = 'wrap';
+			document.body.appendChild(wrap);
+			
 			var header = document.createElement('div');
 			header.id = 'header'; //<div id='header'> </div> 만든거랑 같음. body는 안보이지 존재함.
 			document.body.appendChild(header); //document는 가상의 최상위 객체. html에서 body를 제외한 header부분을 추가함.
