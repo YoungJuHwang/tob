@@ -1,22 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="lead">Shop Name</div>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                    <a href="#" class="list-group-item">Category 4</a>
-                    <a href="#" class="list-group-item">Category 5</a>
-                    <a href="#" class="list-group-item">Category 6</a>
-                    <a href="#" class="list-group-item">Category 7</a>
-                    <a href="#" class="list-group-item">Category 8</a>
-                    <a href="#" class="list-group-item">Category 9</a>
-                    <a href="#" class="list-group-item">Category 10</a>
-                    <a href="#" class="list-group-item">Category 11</a>
-                </div>
-            </div>
+            
 
             <div class="col-md-9">
 
@@ -102,6 +87,23 @@
                         <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
                         <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>
                     </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="lead">Shop Name</div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Category 1</a>
+                    <a href="#" class="list-group-item">Category 2</a>
+                    <a href="#" class="list-group-item">Category 3</a>
+                    <a href="#" class="list-group-item">Category 4</a>
+                    <a href="#" class="list-group-item">Category 5</a>
+                    <a href="#" class="list-group-item">Category 6</a>
+                    <a href="#" class="list-group-item">Category 7</a>
+                    <a href="#" class="list-group-item">Category 8</a>
+                    <a href="#" class="list-group-item">Category 9</a>
+                    <a href="#" class="list-group-item">Category 10</a>
+                    <a href="#" class="list-group-item">Category 11</a>
                 </div>
             </div>
         </div>
