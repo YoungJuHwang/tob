@@ -26,7 +26,12 @@ public class EventController extends HttpServlet {
 		switch (command.getPage()) {
 		case "Event":
 			break;
-
+		case "event_form":
+			break;
+		case "event_up":
+			break;
+		case "event_de":
+			break;
 		default:
 			break;
 		}
