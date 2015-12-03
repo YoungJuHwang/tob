@@ -1,4 +1,4 @@
-package order;
+package purchase;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ import global.Seperator;
  * Servlet implementation class OrderController
  */
 @WebServlet("/order/Order.do")
-public class OrderController extends HttpServlet {
+public class PurchaseController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException{

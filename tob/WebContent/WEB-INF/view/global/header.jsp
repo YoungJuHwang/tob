@@ -79,8 +79,7 @@
 
 	$(function() {
 		$('#login').click(function() {
-			alert('sad');
-			bom.popup();	
+			bom.login();
 		});
 		$('#admin').click(function() {
 			admin.checkAdmin();
@@ -101,6 +100,9 @@
 		style = style+',top='+ypos+',left='+xpos+',width='+width+",height="+height;
 		url = url + param;
 		window.open(url,'',style);
+	}
+	bom.login = function() {
+		
 	}
 	
 	var admin = {
