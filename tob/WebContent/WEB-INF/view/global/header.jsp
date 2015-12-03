@@ -30,11 +30,11 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Category <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="${context}/book.do?page=book">연우페이지로</a></li>
-						<li><a href="${context}/main.do?page=event">정민페이지로</a></li>
-						<li><a href="${context}/main.do?page=order">혜숙페이지로</a></li>
-						<li><a href="${context}/main.do?page=member">형동페이지로</a></li>
-						<li><a href="${context}/main.do?page=admin">수민페이지로</a></li>
+						<li><a href="${context}/book/Book.do">연우페이지로</a></li>
+						<li><a href="${context}/event/Event.do">정민페이지로</a></li>
+						<li><a href="${context}/order/Order.do">혜숙페이지로</a></li>
+						<li><a href="${context}/member/Member.do">형동페이지로</a></li>
+						<li><a href="${context}/admin/Admin.do">수민페이지로</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="#">Separated link</a></li>
 						<li role="separator" class="divider"></li>
