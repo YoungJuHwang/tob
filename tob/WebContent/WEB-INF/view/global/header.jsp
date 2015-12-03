@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="${context}/main.do">
+      <a class="navbar-brand" href="${context}/main/Home.do">
 	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 	  </a>
     </div>
@@ -32,7 +32,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="${context}/book/Book.do">연우페이지로</a></li>
 						<li><a href="${context}/event/Event.do">정민페이지로</a></li>
-						<li><a href="${context}/order/Order.do">혜숙페이지로</a></li>
+						<li><a href="${context}/purchase/Purchase.do">혜숙페이지로</a></li>
 						<li><a href="${context}/member/Member.do">형동페이지로</a></li>
 						<li><a href="${context}/admin/Admin.do">수민페이지로</a></li>
 						<li role="separator" class="divider"></li>

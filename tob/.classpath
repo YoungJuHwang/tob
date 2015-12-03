@@ -12,11 +12,11 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="C:/DAY_eclipse/eclipse/cos.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/DAY_eclipse/eclipse/gson-2.2.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/DAY_eclipse/eclipse/json_simple-1.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/DAY_eclipse/eclipse/jstl.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/DAY_eclipse/eclipse/ojdbc6.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/DAY_eclipse/eclipse/standard.jar"/>
+	<classpathentry kind="lib" path="C:/jse/cos.jar"/>
+	<classpathentry kind="lib" path="C:/jse/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/jse/json_simple-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/jse/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/jse/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/jse/standard.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
