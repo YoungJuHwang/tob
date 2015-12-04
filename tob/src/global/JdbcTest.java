@@ -19,10 +19,10 @@ public class JdbcTest {
 				Constants.ORACLE_PASSWORD);
 		stmt = conn.createStatement();
 		
-		rs = stmt.executeQuery("select * from TEST ");
+		rs = stmt.executeQuery("select * from event ");
 		String id = null;
 		while (rs.next()) {
-			id = rs.getString("name");
+			id = rs.getString("event_id");
 		}
 		System.out.println("ID : "+id);
 	} catch(Exception e){

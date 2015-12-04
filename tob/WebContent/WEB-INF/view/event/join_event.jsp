@@ -25,15 +25,14 @@
 			<input name="toDt" type="text" id="toDt" size="8" maxlength="8" title="종료일자">		
 		</TD>
 	</TR>
-	<TR>
+	<!-- <TR>
 		<TD WIDTH=120 ALIGN=CENTER ><B>이미지</B></TD>
 		<TD WIDTH=500>
-			<form action="../index.html">
+			<form action="">
 				이미지 선택: <input type="file" name="img" multiple> 
-			<inputtype="submit">
 			</form>
 		</TD>
-	</TR>
+	</TR> -->
 	<TR ALIGN=CENTER>
 		<TD colspan="2">		
 			<IMG SRC="${context}/images/btn_id_confirm.gif" STYLE=CURSOR:HAND id="join">&nbsp;&nbsp;
@@ -46,11 +45,50 @@
 
 
 <script type="text/javascript">
-	$(function() {
-		$('#join').click(function() {
-			Join.join();
-		});
+$(function() {
+	$('#join').click(function() {
+		Join.join();
 	});
+});
+
+var Join = {
+		join : function() {
+			alert("이벤트 클릭함")
+			$('#evt_join').submit(function(e) {
+				e.preventDefault(); 
+				alert("이벤트조인 서브밋 통과했음")
+				
+				$.ajax('${context}/event/Event.do',{
+					 data :{
+						evtName : $('#evtName').val(),
+						fromDt : $('#fromDt').val(),
+						toDt : $('#toDt').val(),
+						page : 'join_event1' 
+					},
+					dataType : 'json',
+					success : function(data) {
+						alert("success 들어감")
+						if (data.result == "success") {
+							alert(data.evtName+"을 등록 하시겠습니까?")
+							  $("<div id='make' style='height:100%; width:100%; background:white;'> </div>").appendTo($('#temp').empty());
+			                  $("#make").html('<div id ="" style="padding-top : 50px; padding-left : 50px;   width: 900px;height: 100%;   margin: auto;background: rgba(232, 183, 183, 0.14);"><h1>'+data.evtName+'의 <br/> 책 등록이 완료 되었습니다</h1><br/></div>');
+						}else{
+							alert("실패")
+						}
+						
+					},
+					error : function(xhr,status,msg) {
+						alert("상태"+status+", 내용"+msg);
+					}
+					
+				});
+						
+			});
+						$('#evt_join').submit();
+		},
+}; 
+ 
+
 	$(document).ready(function() {
 		var clareCalendar = {
 		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
