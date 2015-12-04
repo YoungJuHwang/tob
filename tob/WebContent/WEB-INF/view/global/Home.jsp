@@ -4,7 +4,6 @@
 	$(function() {
 		Global.init();
 		$('#header').load('${context}/main/header.do');
-		$('#box').load('${context}/main/jumbotron.do');
 		$('#footer').load('${context}/main/footer.do');
 	});
 	
