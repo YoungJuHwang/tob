@@ -3,7 +3,7 @@
 <script type="text/javascript">
 	$(function() {
 		Global.init();
-		$('#header').load('${context}/main/header.do');
+		$('#box').load('${context}/main/header.do');
 		$('#footer').load('${context}/main/footer.do');
 	});
 	
