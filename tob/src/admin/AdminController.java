@@ -26,8 +26,6 @@ public class AdminController extends HttpServlet {
 		switch (command.getPage()) {
 		case "Admin":
 			break;
-		case "search":
-			return;
 		default:
 			break;
 		}

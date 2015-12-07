@@ -34,7 +34,6 @@ public class PurchaseController extends HttpServlet {
 	int sum;
 	PurchaseVO purchase = new PurchaseVO();
 	JSONObject obj = new JSONObject();
-	Gson gson = new Gson();
 	
 	
 	public void service(HttpServletRequest request, HttpServletResponse response) 
@@ -52,20 +51,12 @@ public class PurchaseController extends HttpServlet {
 			System.out.println("전체 주문번호 목록 진입");
 			List list = new ArrayList();
 			list = purchaseservice.getList();
-			JsonElement element = gson.toJsonTree(list, new TypeToken<List>() {}.getType());
-			JsonArray purList = element.getAsJsonArray();
-			response.setContentType("application/json; charset=UTF-8");
-			response.getWriter().print(purList);
 			
 			return;
 		case "acc_list":
 			System.out.println("주문번호에 따른 목록 진입");
 			List list2 = new ArrayList();
 			list2 = purchaseservice.searchByAccNum("accountNum");
-			JsonElement element2 = gson.toJsonTree(list2, new TypeToken<List>() {}.getType());
-			JsonArray accList2 = element2.getAsJsonArray();
-			response.setContentType("application/json; charset=UTF-8");
-			response.getWriter().print(accList2);
 			
 			return;
 		case "user_list":

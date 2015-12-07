@@ -26,7 +26,6 @@ public class BookController extends HttpServlet {
 		switch (command.getPage()) {
 		case "Book":
 			break;
-
 		default:
 			break;
 		}

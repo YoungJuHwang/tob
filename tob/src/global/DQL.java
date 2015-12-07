@@ -13,5 +13,9 @@ public class DQL {
 	public static String count(String table){
 		return "select count(*) as count from "+table;
 	}
+	public static String searchTwo(String table, String column1, String keyword1, String column2, String keyword2){
+		//System.out.println("select * from "+table+" where "+column1+"='"+keyword1+"' and "+column2+"='"+keyword2+"'");
+		return "select * from "+table+" where "+column1+"='"+keyword1+"' and "+column2+"='"+keyword2+"'";
+	}
 }
 
