@@ -16,7 +16,7 @@ import javax.xml.stream.events.Comment;
 /**
  * Servlet implementation class JsController
  */
-@WebServlet({"/main/Home.do","/main/header.do","/main/footer.do","/main/jumbotron.do"})
+@WebServlet({"/main/Home.do"})
 public class MainController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
