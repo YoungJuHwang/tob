@@ -8,7 +8,9 @@ public class EventVO  implements Serializable{
 	
 	private String evtId;
 	private String evtName;
-	private String term;
+	private String fromDt;
+	private String toDt;
+
 	
 	public static EventVO instance = new EventVO();
 	public static EventVO getInstance(){
@@ -17,10 +19,11 @@ public class EventVO  implements Serializable{
 	public EventVO() {
 		// TODO Auto-generated constructor stub
 	}
-	public EventVO(String evtId,String evtName,String term) {
+	public EventVO(String evtId,String evtName,String fromDt,String toDt) {
 		this.evtId = evtId;
 		this.evtName = evtName;
-		this.term = term;
+		this.fromDt = fromDt;
+		this.toDt = toDt;
 	}
 	public String getEvtId() {
 		return evtId;
@@ -28,8 +31,11 @@ public class EventVO  implements Serializable{
 	public String getEvtName() {
 		return evtName;
 	}
-	public String getTerm() {
-		return term;
+	public String getFromDt() {
+		return fromDt;
+	}
+	public String getToDt() {
+		return toDt;
 	}
 	public void setEvtId(String evtId) {
 		this.evtId = evtId;
@@ -37,12 +43,15 @@ public class EventVO  implements Serializable{
 	public void setEvtName(String evtName) {
 		this.evtName = evtName;
 	}
-	public void setTerm(String term) {
-		this.term = term;
+	public void setFromDt(String fromDt) {
+		this.fromDt = fromDt;
+	}
+	public void setToDt(String toDt) {
+		this.toDt = toDt;
 	}
 	@Override
 	public String toString() {
-		return "이벤트 [당첨자ID=" + evtId + ", 이벤트명=" + evtName + ", 기간=" + term + "]";
+		return "이벤트 [당첨자 아이디=" + evtId + ", 이벤트명=" + evtName + ", 첫기간=" + fromDt + ", 끝기간=" + toDt + "]";
 	}
 	
 	

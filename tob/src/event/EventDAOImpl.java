@@ -32,6 +32,7 @@ public class EventDAOImpl implements EventDAO {
 	 }
 	@Override
 	public List<EventVO> selectAll() {
+
 		try {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(DQL.searchAll("event"));
@@ -40,7 +41,8 @@ public class EventDAOImpl implements EventDAO {
 				EventVO temp = new EventVO();
 				temp.setEvtId(rs.getString("evtId"));
 				temp.setEvtName(rs.getString("evtName"));
-				temp.setTerm(rs.getString("term"));
+				temp.setFromDt(rs.getString("fromDt"));
+				temp.setToDt(rs.getString("toDt"));
 				list.add(temp);
 				
 			}
@@ -53,14 +55,14 @@ public class EventDAOImpl implements EventDAO {
 	@Override
 	public int insert(EventVO o) {
 		int result = 0;
-		
+		System.out.println("DAO INSERT 진입");
 		try {
-			String sql = "insert into event("
-					+ "evtId,evtName,term) values(?,?,?)";
+			String sql = "insert into event(event_id,event_name,form_dt,to_dt) values('abc',?,'2015-12-12','2015-12-12')";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, o.getEvtId());
-			pstmt.setString(2, o.getEvtName());
-			pstmt.setString(3, o.getTerm());
+			/*pstmt.setString(1, o.getEvtId());*/
+			pstmt.setString(1, o.getEvtName());
+			/*pstmt.setString(3, o.getFromDt());
+			pstmt.setString(4, o.getToDt());*/
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -71,17 +73,23 @@ public class EventDAOImpl implements EventDAO {
 	}
 	@Override
 	public int update(EventVO event) {
-		int result;
+		int result =0;
 		
 		try {
-			String sql = "update event set";
+			String sql = "update event set evtName = ?, formDt = ?, toDt = ? where evtId = ?";
 			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, event.getEvtName());
+			pstmt.setString(2, event.getFromDt());
+			pstmt.setString(3, event.getToDt());
+			pstmt.setString(4, event.getEvtId());
+			
+			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		return 0;
+		System.out.println("DAO : 오라클 변경후 리턴값" +result);
+		return result;
 	}
 	@Override
 	public int count() {
@@ -93,7 +101,7 @@ public class EventDAOImpl implements EventDAO {
 		int result = 0;
 		
 		try {
-			String sql = "delete from event where evtName = ?";
+			String sql = "delete from event where evtId = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, key);
 			result = pstmt.executeUpdate();
