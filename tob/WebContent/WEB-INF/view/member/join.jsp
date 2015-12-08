@@ -4,7 +4,7 @@
 $(function() {
 	$("#joinBtn").click(function() {
 		if($("#userid").val() == "") {
-			alert("아이디를 입력하세요.");
+			alert("아이디를 입력하세요s.");
 			$("#userid").focus();
 			return false;
 		}

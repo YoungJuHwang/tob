@@ -4,7 +4,7 @@
 $(function() {
 	$("#joinBtn").click(function() {
 		if($("#name").val() == "") {
-			alert("이름을 입력하세요.");
+			alert("이름을 입력하세요ddd.");
 			$("#name").focus();
 			return false;
 		}

@@ -5,7 +5,7 @@ $(function() {
 	
 	$("#findIdBtn").click(function() {
 		if($("#name").val() == "") {
-			alert("이름을 입력하세요.");
+			alert("이름을 입력하세요s.");
 			$("#name").focus();
 			return false;
 		}
