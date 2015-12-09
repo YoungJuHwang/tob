@@ -15,6 +15,7 @@ public class BookVO implements Serializable{
 	private String genreId; 	//장르
 
 	
+	
 	public BookVO(){}
 	
 	

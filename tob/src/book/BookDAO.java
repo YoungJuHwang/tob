@@ -14,4 +14,5 @@ public interface BookDAO {
 	public List<BookVO> selectAll();
 	
 	public int update(BookVO book);//책 수정
+	
 }

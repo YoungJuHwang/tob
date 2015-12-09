@@ -20,6 +20,7 @@ public class BookDAOImpl implements BookDAO{
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
+	
 	private static BookDAO instance = new BookDAOImpl();
 	public static BookDAO  getInstance(){
 		return instance;

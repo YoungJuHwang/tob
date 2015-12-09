@@ -40,7 +40,7 @@ public class BookController extends HttpServlet {
 		
 	switch (command.getPage()) {
 	case "book":
-		System.out.println("book 들어옴");break;
+		System.out.println("book  들어옴");break;
 	case "book_join" : break;
 	
 	case "book_info": 
