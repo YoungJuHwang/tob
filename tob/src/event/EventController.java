@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.simple.JSONObject;
 
-import com.google.gson.Gson;
-
 import global.Command;
 import global.DispatcherJson;
 import global.DispatcherServlet;
@@ -26,7 +24,6 @@ public class EventController extends HttpServlet {
 	EventService service = EventServiceImpl.getInstance();
 	String evtName,fromDt,toDt,evtId;
 	JSONObject obj = new JSONObject();
-	/*Gson gson = new Gson();*/
 	EventVO event = new EventVO();
 	int result;
 	@SuppressWarnings("unchecked")

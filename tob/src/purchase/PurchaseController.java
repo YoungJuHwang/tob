@@ -14,14 +14,11 @@ import javax.servlet.http.HttpSession;
 import org.json.simple.JSONObject;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.reflect.TypeToken;
 
 import global.Command;
 import global.DispatcherServlet;
 import global.Seperator;
-import jdk.nashorn.api.scripting.JSObject;
+
 
 /**
  * Servlet implementation class OrderController
@@ -34,7 +31,7 @@ public class PurchaseController extends HttpServlet {
 	int sum;
 	PurchaseVO purchase = new PurchaseVO();
 	JSONObject obj = new JSONObject();
-	
+	Gson gson = new Gson();
 	
 	public void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException{
