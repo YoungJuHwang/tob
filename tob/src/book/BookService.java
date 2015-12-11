@@ -11,7 +11,6 @@ public interface BookService {
 	public int delete(String book);
 	
 	
-	
 	//책 검색 (책이름으로)
 	public BookVO serachByBook(String book);
 	

@@ -7,7 +7,6 @@
 
 
 
-
 <script src="${context}/js/global.js"></script>
 <script type="text/javascript">
 

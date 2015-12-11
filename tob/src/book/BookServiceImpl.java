@@ -15,7 +15,6 @@ public int registration(BookVO o) {
 
 
 
-
 @Override
 public int amountBook(String book) {
 	return dao.amountBook();
