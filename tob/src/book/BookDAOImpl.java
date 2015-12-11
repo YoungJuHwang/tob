@@ -99,14 +99,14 @@ public class BookDAOImpl implements BookDAO{
 			
 			while (rs.next()) {
 
-				temp.setBookId(rs.getString("bookId"));
-				temp.setBookName(rs.getString("bookName"));
-				temp.setBookPrice(rs.getString("bookPrice"));
+				temp.setBookId(rs.getString("book_Id"));
+				temp.setBookName(rs.getString("book_Name"));
+				temp.setBookPrice(rs.getString("book_Price"));
 				temp.setWriter(rs.getString("writer"));
 				temp.setGrade(rs.getString("grade"));
-				temp.setStockSeq(rs.getString("stockSeq"));
-				temp.setOptionBook(rs.getString("optionBook"));
-				temp.setGenreId(rs.getString("genreId"));
+				temp.setStockSeq(rs.getString("stock_Seq"));
+				temp.setOptionBook(rs.getString("option_Book"));
+				temp.setGenreId(rs.getString("genre_Id"));
 				
 				
 			}
@@ -128,14 +128,14 @@ public class BookDAOImpl implements BookDAO{
 			
 			while (rs.next()) {
 				BookVO temp = new BookVO();
-				temp.setBookId(rs.getString("bookId"));
-				temp.setBookName(rs.getString("bookName"));
-				temp.setBookPrice(rs.getString("bookPrice"));
+				temp.setBookId(rs.getString("book_Id"));
+				temp.setBookName(rs.getString("book_Name"));
+				temp.setBookPrice(rs.getString("book_Price"));
 				temp.setWriter(rs.getString("writer"));
 				temp.setGrade(rs.getString("grade"));
-				temp.setStockSeq(rs.getString("stockSeq"));
-				temp.setOptionBook(rs.getString("optionBook"));
-				temp.setGenreId(rs.getString("genreId"));
+				temp.setStockSeq(rs.getString("stock_Seq"));
+				temp.setOptionBook(rs.getString("option_Book"));
+				temp.setGenreId(rs.getString("genre_Id"));
 				
 				list.add(temp);
 			}
