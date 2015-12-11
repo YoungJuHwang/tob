@@ -153,7 +153,7 @@ public class AdminController extends HttpServlet {
 		case "delete2":
 			bookId = request.getParameter("bookid");
 			bookService.delete(bookId);
-			json.put("result", userid + " 삭제를 완료했습니다. ");
+			json.put("result", userid + " 삭제를 완료. ");
 			response.setContentType("application/x-json; charset=utf-8");
 			response.getWriter().print(json);
 			json.clear();
