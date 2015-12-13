@@ -14,6 +14,9 @@ import javax.servlet.http.HttpSession;
 import org.json.simple.JSONObject;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.reflect.TypeToken;
 
 import global.Command;
 import global.DispatcherServlet;
@@ -23,12 +26,12 @@ import global.Seperator;
 /**
  * Servlet implementation class OrderController
  */
-@WebServlet("/order/Order.do")
+@WebServlet("/purchase/Purchase.do")
 public class PurchaseController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	PurchaseService purchaseservice = PurchaseServiceImpl.getInstance();
-	String purNum,accountNum,userid;
-	int sum;
+	PurchaseService service = PurchaseServiceImpl.getInstance();
+	String purNum,sum,accountNum,userid;
+	int result;
 	PurchaseVO purchase = new PurchaseVO();
 	JSONObject obj = new JSONObject();
 	Gson gson = new Gson();
@@ -42,24 +45,61 @@ public class PurchaseController extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		switch (command.getPage()) {
-		case "Order":
+		case "Purchase":
 			break;
-		case "pur_list":
-			System.out.println("전체 주문번호 목록 진입");
+		case "cart":
+			System.out.println("장바구니 서비스 진입");
 			List list = new ArrayList();
-			list = purchaseservice.getList();
+			
+			
+			JsonElement element = gson.toJsonTree(list, new TypeToken<List>(){}.getType());
+			JsonArray cartList = element.getAsJsonArray();
+			response.setContentType("application/json; charset=UTF-8");
+			response.getWriter().print(cartList);
+			System.out.println(cartList);
 			
 			return;
-		case "acc_list":
-			System.out.println("주문번호에 따른 목록 진입");
+		case "list":
+			System.out.println("주문목록 서비스 진입");
 			List list2 = new ArrayList();
-			list2 = purchaseservice.searchByAccNum("accountNum");
-			
+			list2 = service.getList();
+			JsonElement element2 = gson.toJsonTree(list2, new TypeToken<List>(){}.getType());
+			JsonArray purList = element2.getAsJsonArray();
+			response.setContentType("application/json; charset=UTF-8");
+			response.getWriter().print(purList);
+			System.out.println(purList);
 			return;
-		case "user_list":
-			System.out.println("아이디에 따른 목록 진입");
-			List list3 = new ArrayList();
-			
+		case "change":
+			System.out.println("change 진입");
+			purNum = request.getParameter("purNum");
+			sum = request.getParameter("sum");
+			accountNum = request.getParameter("accountNum");
+			userid = request.getParameter("userid");
+			System.out.println("purNum : " + purNum);
+			System.out.println("sum : " + sum);
+			System.out.println("accountNum : " + accountNum);
+			System.out.println("userid : " + userid);
+			purchase = service.searchBypurNum(purNum);
+			purchase.setPurNum(purNum);
+			purchase.setSum(sum);
+			purchase.setAccountNum(accountNum);
+			purchase.setUserid(userid);
+			result = service.change(purchase);
+			obj.put("result", purNum+"에 대한 정보 수정 완료");
+			response.setContentType("application/x-json; charset=utf-8");
+			response.getWriter().print(obj);
+			obj.clear();
+		
+			return;
+		case "delete":
+			purNum = request.getParameter("purNum");
+			System.out.println("delete에 넘어온 purNum : " + purNum);
+			service.remove(purNum);
+			System.out.println("삭제 완료.");
+			obj.put("result", purNum + "에 대한 삭제를 완료.");
+			response.setContentType("application/json; charset=UTF-8");
+			response.getWriter().print(obj);
+			obj.clear();
 			return;
 		default:
 			break;

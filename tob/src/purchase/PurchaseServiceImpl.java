@@ -9,14 +9,10 @@ public class PurchaseServiceImpl implements PurchaseService{
 	}
 	PurchaseDAO dao = PurchaseDAOImpl.getInstance();
 	
+	
 	@Override
 	public int join(PurchaseVO o) {
 		return dao.insert(o);
-	}
-
-	@Override
-	public int remove(String purNum) {
-		return dao.delete(purNum);
 	}
 
 	@Override
@@ -35,5 +31,14 @@ public class PurchaseServiceImpl implements PurchaseService{
 		return dao.selectAll();
 	}
 
+	@Override
+	public int change(PurchaseVO o) {
+		return dao.update(o);
+	}
+
+	@Override
+	public int remove(String purNum) {
+		return dao.delete(purNum);
+	}
 	
 }
