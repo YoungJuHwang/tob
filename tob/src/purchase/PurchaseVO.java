@@ -1,17 +1,19 @@
 package purchase;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class PurchaseVO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String purNum;
-	private int sum;
+	private String sum;
 	private String accountNum;
 	private String userid;
 	
 	public PurchaseVO(){}
 	
-	public PurchaseVO(String purNum, int sum, String accountNum, String userid){
+	public PurchaseVO(String purNum, String sum, String accountNum, String userid){
 		this.purNum = purNum;
 		this.sum = sum;
 		this.accountNum = accountNum;
@@ -23,12 +25,18 @@ public class PurchaseVO implements Serializable{
 		return purNum;
 	}
 	public void setPurNum(String purNum) {
+		/*Date today = new Date();
+		SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd");
+		int seq = 1;
+		seq++;
+		String tag = String.format("%04d", seq);
+		this.purNum = date + "-" + tag;*/
 		this.purNum = purNum;
 	}
-	public int getSum() {
+	public String getSum() {
 		return sum;
 	}
-	public void setSum(int sum) {
+	public void setSum(String sum) {
 		this.sum = sum;
 	}
 	public String getAccountNum() {
