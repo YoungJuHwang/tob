@@ -162,34 +162,14 @@ INSERT INTO BOOK VALUES('pagoda','파고다 토익','23000','저자9','9.9',null
 INSERT INTO BOOK VALUES('ybm','YBM 토익','11000','저자10','8.3',null,null,null);
 
 
-INSERT INTO CART VALUES(null,null,'3');
-INSERT INTO CART VALUES(null,null,'1');
-INSERT INTO CART VALUES(null,null,'2');
-INSERT INTO CART VALUES(null,null,'3');
-INSERT INTO CART VALUES(null,null,'3');
+INSERT INTO CART VALUES(null,null,null,'3');
+INSERT INTO CART VALUES(null,null,null,'1');
+INSERT INTO CART VALUES(null,null,null,'2');
+INSERT INTO CART VALUES(null,null,null,'3');
+INSERT INTO CART VALUES(null,null,null,'3');
 
 INSERT INTO EVENT VALUES('random','선착순증정이벤트','2010.11.11','1102.12.03');
 INSERT INTO EVENT VALUES('resverve','예약판매이벤트','2013.12.01','1022.12.25');
 INSERT INTO EVENT VALUES('lotto','로또이벤트','2011.12.01','2015.25');
 
 COMMIT;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

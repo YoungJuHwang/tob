@@ -15,7 +15,7 @@ public class PurchaseVO implements Serializable{
 	
 	public PurchaseVO(String purNum, String sum, String accountNum, String userid){
 		this.purNum = purNum;
-		this.sum = sum;
+		this.sum = sum; 
 		this.accountNum = accountNum;
 		this.userid = userid;
 	}
