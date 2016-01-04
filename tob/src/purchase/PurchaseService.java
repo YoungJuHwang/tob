@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface PurchaseService {
 	
-	// 주문내역 추가
-	public int join(PurchaseVO o);
+	// 주문내역 등록
+	public int regist(PurchaseVO o);
 	
 	// 주문내역 (주문번호로) 조회
 	public PurchaseVO searchBypurNum(String purNum);

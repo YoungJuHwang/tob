@@ -59,6 +59,11 @@ public class PurchaseController extends HttpServlet {
 			System.out.println(cartList);
 			
 			return;
+		case "regist":
+			System.out.println("주문등록 서비스 진입");
+			
+			return;
+			
 		case "list":
 			System.out.println("주문목록 서비스 진입");
 			List list2 = new ArrayList();

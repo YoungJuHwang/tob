@@ -11,7 +11,7 @@ public class PurchaseServiceImpl implements PurchaseService{
 	
 	
 	@Override
-	public int join(PurchaseVO o) {
+	public int regist(PurchaseVO o) {
 		return dao.insert(o);
 	}
 

@@ -9,6 +9,9 @@ public class CartVO implements Serializable{
 	private String userid;
 	private int count;
 	
+	public CartVO() {
+		
+	}
 	public CartVO(String bookId, String purNum, String userid, int count){
 		this.bookId = bookId;
 		this.purNum = purNum;
